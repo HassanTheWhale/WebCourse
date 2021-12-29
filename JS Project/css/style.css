@@ -92,12 +92,6 @@ footer {
   font-weight: bold;
 }
 
-/* get the span inside of footer */
-footer span {
-  /* change color to white */
-  color: white;
-}
-
 /* nav styles here: */
 nav {
   /* make nav a flex container */
