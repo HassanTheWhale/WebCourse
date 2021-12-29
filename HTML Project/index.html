@@ -1,0 +1,161 @@
+<!-- tell the browser that this file is html-5 file -->
+<!-- You can see html tags in here: https://www.w3schools.com/tags/default.asp -->
+<!DOCTYPE html>
+<html>
+  <!-- head is used to put information that will not show in the page (body) -->
+  <head>
+    <!-- meta tags that is used to make the page work properly -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- this meta tag is so important to make the page responsive with small screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- this is the page title -->
+    <title>Your name</title>
+
+    <!-- link css file -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- page icon -->
+    <link rel="icon" href="./images/sleeping.ico" />
+  </head>
+  <!-- information that will show in the body (page) -->
+  <body>
+    <!-- header content -->
+    <header id="top">Welcome to my website!!!</header>
+
+    <!-- navBar -->
+    <nav>
+      <!-- img tag required at least to know the src and alt -->
+      <img src="./images/logo.png" alt="Logo" />
+
+      <!-- ul tag = unordered tag.. li = list item.. a = anchor (used with links) -->
+      <ul>
+        <li>
+          <!-- this kind of links get the user to a bookmark in this same page -->
+          <a href="#top">Home</a>
+        </li>
+        <li><a href="#work">My Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <!-- this link will open in a new tab because of the target="_blank" -->
+          <a href="https://youtube.com/c/hassanalshammari" target="_blank"
+            >My Youtube</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!-- main section -->
+    <main>
+      <!-- top section -->
+      <section>
+        <!-- overlay -->
+        <!-- div is used to create a group/section (we may use section tag as well) -->
+        <div>
+          <!-- h3 to be used as a header -->
+          <!-- span can be used to help us access specific content. -->
+          <h3>Hello, <span>Hi</span>, World</h3>
+
+          <!-- this is a paragraph -->
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Accusantium quia recusandae, doloremque est molestiae expedita
+            harum! Nemo maiores, autem earum voluptatibus illo fuga culpa hic ex
+            excepturi aliquid laudantium cum?
+          </p>
+
+          <!-- buttons -->
+          <button>Hello!</button>
+        </div>
+      </section>
+
+      <!-- mywork section -->
+      <section id="work">
+        <h2>My Work</h2>
+        <p>Talk generaly about the work</p>
+        <div>
+          <!-- article tag can be used inside of sections too.. div or section can replace this. -->
+          <article>
+            <h4>title</h4>
+            <p>date</p>
+            <p>talk about your work</p>
+          </article>
+
+          <article>
+            <h4>title</h4>
+            <p>date</p>
+            <p>talk about your work</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- contact section -->
+      <section id="contact">
+        <h2>My Form</h2>
+        <p>Help us, share, build!!</p>
+
+        <!-- we have to put the form tag when we want to deal with its children (textarea, input) -->
+        <form>
+          <!-- a div to group some elements -->
+          <div>
+            <!-- label is used to connect a text with the input -->
+            <label for="formName">Your Name:</label>
+            <!-- text input -->
+            <input
+              type="text"
+              name="formName"
+              id="formName"
+              placeholder="Enter your name"
+              class="myInput"
+            />
+          </div>
+
+          <div>
+            <label for="formEmail">Enter Email:</label>
+            <input
+              type="email"
+              name="formEmail"
+              id="formEmail"
+              placeholder="Enter your email"
+              class="myInput"
+            />
+          </div>
+
+          <div>
+            <label for="formMSG">Enter the message:</label>
+            <!-- textarea accepet for chars than text type of input -->
+            <textarea
+              name="formMSG"
+              id="formMSG"
+              placeholder="Your msg here:"
+              class="myTextArea"
+            ></textarea>
+          </div>
+
+          <div>
+            <label>Enter the type:</label>
+            <br />
+            <input type="radio" name="formType" value="one" id="formTypeOne" />
+            <label for="formTypeOne">Complaint</label>
+            <br />
+            <input type="radio" name="formType" value="two" id="formTypeTwo" />
+            <label for="formTypeTwo">Suggestion</label>
+          </div>
+
+          <div>
+            <button>Submit</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- footer tag -->
+    <footer>Copyright, made with ❤️ By <span>yourname</span>.</footer>
+
+    <!-- write your JS code directly in this html page -->
+    <script></script>
+
+    <!-- link your JS file to this page -->
+    <script src="./js/myScript.js"></script>
+  </body>
+</html>
