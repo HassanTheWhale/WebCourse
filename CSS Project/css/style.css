@@ -1,2 +1,231 @@
 /* you can see css Properties here: https://www.w3schools.com/cssref/default.asp */
 /* You can learn and see how you can implement them here: https://www.w3schools.com/css/default.asp */
+/* Note that you can make this code more shorter than this. This page made to help us understand things. 
+    Try to make it shorter once you get used to css codes! Practice Practice Practice! */
+
+/* Body & General used style here: */
+/* the star * means all tags */
+* {
+  /* to let all elements respect sizes */
+  box-sizing: border-box;
+}
+
+body {
+  /* change the font type for all children in body */
+  font-family: Arial, Helvetica, sans-serif;
+  /* remove default margins from body */
+  margin: 0;
+}
+
+/* center class that can be used anytime needed */
+.center {
+  /* align the text to center */
+  text-align: center;
+}
+
+/* right class that can be used anytime needed */
+.right {
+  /* align the text to right */
+  text-align: right;
+}
+
+/* muted class that can be used anytime needed */
+.muted {
+  /* change color of text */
+  color: darkgray;
+}
+
+/* change the color of all anchors in the page and remove the underline decoration */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* change the color of all anchors in the page on hover */
+a:hover {
+  color: #2fa5db;
+}
+
+/* change the style of any button in the page */
+button {
+  /* background */
+  background-color: rgb(62, 30, 177);
+  /* text color */
+  color: white;
+  /* set border */
+  border: 1px solid white;
+  /* set padding */
+  padding: 8px 23px;
+}
+/* set the cursor to be pointer on hover on button */
+button:hover {
+  cursor: pointer;
+}
+
+/* title class that can be used anytime we want.. note that this class can be used only with headers tag */
+h1.title,
+h2.title,
+h3.title,
+h4.title,
+h5.title,
+h6.title {
+  /* set text shadow */
+  text-shadow: 0 0 5px #2fa5db;
+  /* remove default margin top  */
+  margin-top: 0;
+}
+
+/* header & footer style here: */
+header,
+footer {
+  /* set the background color of the header to orange using the hex code */
+  background-color: #2fa5db;
+  /* set padding space 8px for top and bottom, 0 for left and right */
+  padding: 8px 0;
+  /* instead of putting text-align: center, we can use class .center directly in html */
+  /* change the font weight */
+  font-weight: bold;
+}
+
+/* get the span inside of footer */
+footer span {
+  /* change color to white */
+  color: white;
+}
+
+/* nav styles here: */
+nav {
+  /* make nav a flex container */
+  display: flex;
+  /* align items to center */
+  align-items: center;
+  /* justify content to space-around */
+  justify-content: space-around;
+  /* set padding space 8px for top and bottom, 0 for left and right */
+  padding: 16px 0;
+}
+
+/* get the class logo inside of nav only */
+nav .logo {
+  /* set the width to 64px */
+  width: 64px;
+}
+/* get navList class that is inside of nav only */
+
+nav .navList {
+  /* remove default padding and margin */
+  padding: 0;
+  margin: 0;
+}
+
+/* get navItem class from inside navList class that is inside of nav only */
+nav .navList .navItem {
+  /* force the display to be inline */
+  display: inline;
+
+  /* set some space to the left */
+  margin-left: 12px;
+}
+
+/* welcome Section styles here: */
+.welcomeSection {
+  /* set the height to 100 vh == 100% */
+  height: 100vh;
+  /* set background img */
+  background-image: url(../images/main.png);
+  /* let the background be fixed */
+  background-attachment: fixed;
+  /* position the background to be in center */
+  background-position: center;
+  /* set the background size to be contained */
+  background-size: contain;
+  /* set the color of all texts inside it to white */
+  color: #ffffff;
+}
+/* overlay inside of welcome section only */
+.welcomeSection .overlay {
+  /* set the width and height to 100% */
+  width: 100%;
+  height: 100%;
+  /* set the background color to black with good opacity (alpha) */
+  background-color: rgba(0, 0, 0, 0.5);
+
+  /* set the overlay to be flex container */
+  display: flex;
+  /* let it be column flex direction */
+  flex-direction: column;
+  /* align items in container to be in center */
+  align-items: center;
+  /* also, justify them to center */
+  justify-content: center;
+
+  /* set a padding of 16px for left and right */
+  padding: 0 16px;
+}
+
+/* get the spans inside of .overlay inside of .welcomeSection */
+.welcomeSection .overlay span {
+  /* change the color */
+  color: #2fa5db;
+}
+
+/* myWork section style here: */
+#work {
+  padding: 64px 8px;
+  background-color: #fbfbfb;
+}
+
+/* set the workList to be flex and use flex props. */
+#work .workList {
+  margin: 100px 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* edit per card inside of .workList  */
+#work .workList .card {
+  background-color: #fff;
+  /* set some box shadow */
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+  padding: 8px;
+  width: 25%;
+}
+
+/* Contact section style here: */
+#contact {
+  padding: 64px 8px;
+}
+
+/* edit the form inside of contact  */
+#contact form {
+  background-color: #fafafa;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+  /* set the width to 50% */
+  width: 50%;
+  /* set margin 100px top and bottom, auto for left and right */
+  margin: 100px auto;
+  padding: 16px;
+  /* add some border radius to get the corner style */
+  border-radius: 10px;
+}
+
+#contact form .form-group {
+  margin-bottom: 30px;
+}
+#contact form .myInput,
+#contact form .myTextArea {
+  /* force to change from inline to block */
+  display: block;
+  /* force the width to be 100% */
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px;
+}
+
+/* change the style while focusing (typing) */
+#contact form .myInput:focus,
+#contact form .myTextArea:focus {
+  background-color: #144962;
+  color: white;
+}
