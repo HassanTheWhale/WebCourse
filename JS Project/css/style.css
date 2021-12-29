@@ -10,6 +10,11 @@
   box-sizing: border-box;
 }
 
+html {
+  /* change the scroll behavior to smooth (used for bookmarks mostly) */
+  scroll-behavior: smooth;
+}
+
 body {
   /* change the font type for all children in body */
   font-family: Arial, Helvetica, sans-serif;
