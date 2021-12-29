@@ -22,22 +22,22 @@
   <!-- information that will show in the body (page) -->
   <body>
     <!-- header content -->
-    <header id="top">Welcome to my website!!!</header>
+    <header class="center" id="top">Welcome to my website!!!</header>
 
     <!-- navBar -->
     <nav>
       <!-- img tag required at least to know the src and alt -->
-      <img src="./images/logo.png" alt="Logo" />
+      <img src="./images/logo.png" class="logo" alt="Logo" />
 
       <!-- ul tag = unordered tag.. li = list item.. a = anchor (used with links) -->
-      <ul>
-        <li>
+      <ul class="navList">
+        <li class="navItem">
           <!-- this kind of links get the user to a bookmark in this same page -->
           <a href="#top">Home</a>
         </li>
-        <li><a href="#work">My Work</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li>
+        <li class="navItem"><a href="#work">My Work</a></li>
+        <li class="navItem"><a href="#contact">Contact</a></li>
+        <li class="navItem">
           <!-- this link will open in a new tab because of the target="_blank" -->
           <a href="https://youtube.com/c/hassanalshammari" target="_blank"
             >My Youtube</a
@@ -46,13 +46,13 @@
       </ul>
     </nav>
 
-    <!-- main section -->
+    <!-- main section is where the main content in -->
     <main>
-      <!-- top section -->
-      <section>
+      <!-- welcome section -->
+      <section class="welcomeSection">
         <!-- overlay -->
         <!-- div is used to create a group/section (we may use section tag as well) -->
-        <div>
+        <div class="overlay">
           <!-- h3 to be used as a header -->
           <!-- span can be used to help us access specific content. -->
           <h3>Hello, <span>Hi</span>, World</h3>
@@ -72,19 +72,22 @@
 
       <!-- mywork section -->
       <section id="work">
-        <h2>My Work</h2>
-        <p>Talk generaly about the work</p>
-        <div>
+        <!-- instead of putting class center to both h2, p. we can put them in one div and put the class there -->
+        <div class="center">
+          <h2 class="title center">My Work</h2>
+          <p>Talk generaly about the work</p>
+        </div>
+        <div class="workList">
           <!-- article tag can be used inside of sections too.. div or section can replace this. -->
-          <article>
-            <h4>title</h4>
-            <p>date</p>
+          <article class="card">
+            <h3 class="title">title</h3>
+            <p class="muted">date</p>
             <p>talk about your work</p>
           </article>
 
-          <article>
-            <h4>title</h4>
-            <p>date</p>
+          <article class="card">
+            <h3 class="title center">title</h3>
+            <p class="muted">date</p>
             <p>talk about your work</p>
           </article>
         </div>
@@ -92,13 +95,15 @@
 
       <!-- contact section -->
       <section id="contact">
-        <h2>My Form</h2>
-        <p>Help us, share, build!!</p>
+        <div class="center">
+          <h2 class="title">My Form</h2>
+          <p>Help us, share, build!!</p>
+        </div>
 
         <!-- we have to put the form tag when we want to deal with its children (textarea, input) -->
         <form>
           <!-- a div to group some elements -->
-          <div>
+          <div class="form-group">
             <!-- label is used to connect a text with the input -->
             <label for="formName">Your Name:</label>
             <!-- text input -->
@@ -111,7 +116,7 @@
             />
           </div>
 
-          <div>
+          <div class="form-group">
             <label for="formEmail">Enter Email:</label>
             <input
               type="email"
@@ -122,7 +127,7 @@
             />
           </div>
 
-          <div>
+          <div class="form-group">
             <label for="formMSG">Enter the message:</label>
             <!-- textarea accepet for chars than text type of input -->
             <textarea
@@ -133,7 +138,7 @@
             ></textarea>
           </div>
 
-          <div>
+          <div class="form-group">
             <label>Enter the type:</label>
             <br />
             <input type="radio" name="formType" value="one" id="formTypeOne" />
@@ -143,7 +148,7 @@
             <label for="formTypeTwo">Suggestion</label>
           </div>
 
-          <div>
+          <div class="form-group">
             <button>Submit</button>
           </div>
         </form>
@@ -151,7 +156,10 @@
     </main>
 
     <!-- footer tag -->
-    <footer>Copyright, made with ❤️ By <span>yourname</span>.</footer>
+    <footer class="center">
+      Copyright, made with <span style="color: red">❤️</span> By
+      <span>yourname</span>.
+    </footer>
 
     <!-- write your JS code directly in this html page -->
     <script></script>
