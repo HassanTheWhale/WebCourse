@@ -1,3 +1,4 @@
+// Use this page if you want to know more!: https://www.w3schools.com/js/
 // create a variable called hello that holds the the value of a string "hello" using var.
 
 // create a variable called name that holds the value of a string "Your Name" using let.
