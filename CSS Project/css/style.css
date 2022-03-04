@@ -61,9 +61,8 @@ button {
   border: 1px solid white;
   /* set padding */
   padding: 8px 23px;
-}
-/* set the cursor to be pointer on hover on button */
-button:hover {
+
+  /* change the cursor */
   cursor: pointer;
 }
 

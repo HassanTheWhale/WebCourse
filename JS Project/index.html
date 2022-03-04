@@ -164,22 +164,28 @@
 
     <!-- write your JS code directly in this html page -->
     <script>
+      //access local storage and set thew inputs values
+
       // if (localStorage.hasOwnProperty("name")) alert("name is exist");
       // else alert("name is not exist");
 
+      //get item from local storage
       var name = localStorage.getItem("name");
       var email = localStorage.getItem("email");
       var type = localStorage.getItem("type");
       var msg = localStorage.getItem("msg");
 
+      //check if elements are theire or not
       if (
         name == null ||
         email == (null || undefined) ||
         type == ("null" || undefined) ||
         msg == ("null" || undefined)
       ) {
+        //if not there print ...
         console.log("missing information in localstorage");
       } else {
+        // if there set the values
         document.getElementById("formName").value = name;
         document.getElementById("formEmail").value = email;
         document.querySelector(

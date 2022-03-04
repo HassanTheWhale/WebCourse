@@ -159,11 +159,13 @@ console.log("Result = " + add(10, 10));
 // print the data to the console.
 // use local storage
 function getData() {
+  //declare variables
   var userName;
   var userEmail;
   var userType;
   var userMSG;
 
+  //get the html elements
   userName = document.getElementById("formName").value;
   userEmail = document.getElementById("formEmail").value;
 
@@ -181,6 +183,7 @@ function getData() {
 
   userMSG = document.getElementById("formMSG").value;
 
+  //print the data
   console.log(`
   ------ [ Form Data ] ------
   Name: ${userName}
@@ -190,6 +193,7 @@ function getData() {
   ---------------------------
   `);
 
+  //make the result as object
   var result = {
     name: userName,
     email: userEmail,
@@ -197,15 +201,19 @@ function getData() {
     msg: userMSG,
   };
 
+  //return the result
   return result;
 }
 
 function saveData() {
+  //get information from another function. Note We made getData return us a function
   var form = getData();
 
+  //check if there is any missing information
   if (form.name == "" || form.email == "" || form.type == "" || form.msg == "")
     alert("Missing Information");
   else {
+    //save in local storage
     localStorage.setItem("name", form.name);
     localStorage.setItem("email", form.email);
     localStorage.setItem("type", form.type);
