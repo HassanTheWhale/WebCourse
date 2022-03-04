@@ -149,7 +149,8 @@
           </div>
 
           <div class="form-group">
-            <button onclick="mySubmit()" type="button">Submit</button>
+            <button onclick="" type="button">Submit</button>
+            <button onclick="saveData()" type="button">Save</button>
           </div>
         </form>
       </section>
@@ -162,7 +163,31 @@
     </footer>
 
     <!-- write your JS code directly in this html page -->
-    <script></script>
+    <script>
+      // if (localStorage.hasOwnProperty("name")) alert("name is exist");
+      // else alert("name is not exist");
+
+      var name = localStorage.getItem("name");
+      var email = localStorage.getItem("email");
+      var type = localStorage.getItem("type");
+      var msg = localStorage.getItem("msg");
+
+      if (
+        name == null ||
+        email == (null || undefined) ||
+        type == ("null" || undefined) ||
+        msg == ("null" || undefined)
+      ) {
+        console.log("missing information in localstorage");
+      } else {
+        document.getElementById("formName").value = name;
+        document.getElementById("formEmail").value = email;
+        document.querySelector(
+          `input[name="formType"][value='${type}']`
+        ).checked = true;
+        document.getElementById("formMSG").value = msg;
+      }
+    </script>
 
     <!-- link your JS file to this page -->
     <script src="./js/myScript.js"></script>

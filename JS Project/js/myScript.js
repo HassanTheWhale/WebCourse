@@ -154,18 +154,61 @@ console.log("Result = " + result);
 
 console.log("Result = " + add(10, 10));
 
-// Create a function called mySubmit, link it with the submit button in index.html.
+// Create a function called saveData, link it with the Save function in index.html.
+// Save the data inside of inputs, check if all of the data are available (you may create another function).
+// print the data to the console.
+// use local storage
+function getData() {
+  var userName;
+  var userEmail;
+  var userType;
+  var userMSG;
 
-function mySubmit() {
-  // Save the data inside of inputs, check if all of the data are available.
-  // print the data to the console.
-  var inputName = document.getElementById("formName").value;
-  var inputEmail = document.getElementById("formEmail").value;
+  userName = document.getElementById("formName").value;
+  userEmail = document.getElementById("formEmail").value;
 
-  if (inputName == "" || inputEmail == "") {
-    alert("Missing information");
-  } else {
-    console.log("Name: " + inputName);
-    console.log("Email: " + inputEmail);
+  var typeElem = document.querySelector('input[name="formType"]:checked');
+  if (typeElem == (undefined || null)) userType = "";
+  else userType = typeElem.value;
+  // another way for radio elements.
+
+  // var userTypeArray;
+  // userTypeArray = document.getElementsByName("formType");
+  // for (var i = 0; i < userTypeArray.length; i++) {
+  //   if (userTypeArray[i].checked) userType = userTypeArray[i].value;
+  // }
+  // if (userType == undefined || userType == null) userType = "Null";
+
+  userMSG = document.getElementById("formMSG").value;
+
+  console.log(`
+  ------ [ Form Data ] ------
+  Name: ${userName}
+  Email: ${userEmail}
+  Type: ${userType}
+  MSG: ${userMSG}
+  ---------------------------
+  `);
+
+  var result = {
+    name: userName,
+    email: userEmail,
+    type: userType,
+    msg: userMSG,
+  };
+
+  return result;
+}
+
+function saveData() {
+  var form = getData();
+
+  if (form.name == "" || form.email == "" || form.type == "" || form.msg == "")
+    alert("Missing Information");
+  else {
+    localStorage.setItem("name", form.name);
+    localStorage.setItem("email", form.email);
+    localStorage.setItem("type", form.type);
+    localStorage.setItem("msg", form.msg);
   }
 }
